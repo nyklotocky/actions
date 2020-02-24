@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Actions.Client\Actions.Client.csproj" />
+    <ProjectReference Include="..\Nyk.Utilities\Nyk.Utilities.csproj" />
   </ItemGroup>
 
 
