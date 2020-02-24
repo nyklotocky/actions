@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Nyk.Utilities;
 
 namespace Actions.Web
 {
@@ -22,6 +23,11 @@ namespace Actions.Web
 		{
 			services.AddControllers();
 
+			// this value is stored in appSettings.json
+			// we have a "Development" mapping applied with our local environment connection string
+			// for a true production deployment, we would have a deployment layer of some sort generating a
+			// appSettings.Deployment.json (for instance) to avoid committing sensitive passwords to the repo
+			UtilitiesModule.Register(services, Configuration.GetConnectionString("ActionsTiming"));
 			services.AddTransient<ActionsTimingRetriever>();
 			services.AddTransient<ActionsTimingRecorder>();
 		}
