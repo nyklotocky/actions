@@ -21,8 +21,19 @@ namespace Actions.Web.BusinessLogic
 
 		public async Task<IEnumerable<ActionStatistics>> RetrieveAsync()
 		{
-			await this._sqlQuery.WriteAsync("SELECT 1", new {});
-			throw new NotImplementedException();
+			return await this._sqlQuery.ReadAsync(@"
+				SELECT
+					MAX(a.actionName) AS [name]
+					, AVG(act.actionTime) AS [avg]
+				FROM dbo.actionTimes act
+				JOIN dbo.actions a
+					ON a.actionId = act.actionId
+				GROUP BY act.actionId",
+				new
+				{
+					//todo I need to set up some ITableProvider equivalent for table mocking
+				},
+				resultSchema: default(ActionStatistics));
 		}
 	}
 }
