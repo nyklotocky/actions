@@ -28,7 +28,7 @@ namespace Actions.Web.BusinessLogic
 			this._tableProvider = tableProvider;
 		}
 
-		public async Task RecordAsync(ActionTiming actionTiming)
+		public async Task RecordAsync(ActionTime actionTiming)
 		{
 			var actionTimes = this._tableProvider.Table("actionTimes");
 			var actions = this._tableProvider.Table("actions");

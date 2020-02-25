@@ -1,6 +1,6 @@
 namespace Actions.Client.Data
 {
-	public class ActionTiming
+	public class ActionTime
 	{
 		public string Action { get; set; }
 		public double Time { get; set; }

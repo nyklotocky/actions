@@ -36,7 +36,7 @@ namespace Actions.Web.Controllers
 
 		[HttpPost]
 		[Route("v1/AddAction")]
-		public async Task<ActionResult> AddAction([FromBody] ActionTiming actionTiming)
+		public async Task<ActionResult> AddAction([FromBody] ActionTime actionTiming)
 		{
 			await this._actionsTimingRecorder.RecordAsync(actionTiming);
 
