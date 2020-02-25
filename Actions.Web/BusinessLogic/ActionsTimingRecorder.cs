@@ -1,6 +1,6 @@
 using System;
 using System.Threading.Tasks;
-using Actions.Client.Data;
+using Actions.Web.Data;
 using Nyk.Utilities.TableInfrastructure;
 
 namespace Actions.Web.BusinessLogic

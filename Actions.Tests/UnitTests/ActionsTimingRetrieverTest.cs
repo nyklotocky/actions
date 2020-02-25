@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Actions.Client.Data;
+using Actions.Web.Data;
 using Actions.Web.BusinessLogic;
 using Moq;
 using Newtonsoft.Json;

@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Actions.Client.Data;
 using Actions.Web.BusinessLogic;
+using Actions.Web.Data;
 using Moq;
 using Newtonsoft.Json;
 using NUnit.Framework;

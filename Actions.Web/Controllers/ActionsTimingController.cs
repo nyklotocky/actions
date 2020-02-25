@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Actions.Client.Data;
+using Actions.Web.Data;
 using Actions.Web.BusinessLogic;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

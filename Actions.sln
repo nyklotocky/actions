@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Actions.Client", "Actions.Client\Actions.Client.csproj", "{908802AB-42E2-4FC0-B7D6-E323D7328265}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Actions.Tests", "Actions.Tests\Actions.Tests.csproj", "{64484F65-81A4-4D79-A46D-ACE2AED3E851}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Actions.Web", "Actions.Web\Actions.Web.csproj", "{2CC2DF3D-DF10-4521-9E76-818F0A83DA06}"

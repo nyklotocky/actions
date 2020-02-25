@@ -1,4 +1,4 @@
-namespace Actions.Client.Data
+namespace Actions.Web.Data
 {
 	public class ActionTime
 	{
