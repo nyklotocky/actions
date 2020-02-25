@@ -28,7 +28,7 @@ To run tests:
 dotnet test
 ```
 
-#Next Steps
+# Next Steps
 While the intention of this project was to demonstrate a production-ready API, there remains more work to be done to where this would be a robust implementation ready for extensive and reliable internal or external use.
 ## Client Package
 A client package is useful to simplify the interaction with the true web API. It can be used to abstract away operations such as serialization and deserialization, web calls, and would handle the various wiring up logic, such as registering implementations of internal components. For this package, it is important to consider the visibility and extensibility of each public component, so making appropriate use of visibility modifiers is a very important consideration. For instance - the component we wanted to release would be a `public abstract` class, with an `internal` constructor, thereby preventing arbitrary extension of the public-facing component, while retaining an abstraction contract of the supported functionality, allowing for swapping out the concrete implementation if needed.
