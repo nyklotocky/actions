@@ -1,4 +1,6 @@
+using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.DependencyInjection;
+using Nyk.Utilities.TableInfrastructure;
 
 namespace Nyk.Utilities
 {
@@ -15,6 +17,9 @@ namespace Nyk.Utilities
 		public static void Register(IServiceCollection services, string sqlConnectionString)
 		{
 			services.AddTransient<ISqlQuery>(_ => new SqlQuery(sqlConnectionString));
+
+			var databaseName = new SqlConnectionStringBuilder(sqlConnectionString).InitialCatalog;
+			services.AddTransient<ITableProvider>(_ => new RudimentaryTableProvider(databaseName));
 		}
 	}
 }
