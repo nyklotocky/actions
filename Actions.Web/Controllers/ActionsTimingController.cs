@@ -2,11 +2,13 @@
 using System.Threading.Tasks;
 using Actions.Client.Data;
 using Actions.Web.BusinessLogic;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
 namespace Actions.Web.Controllers
 {
+	[AllowAnonymous] //not ideal, but since we don't have any auth requirements for this project, let's defer this decision
 	[ApiController]
 	[Route("[controller]")]
 	public class ActionsTimingController : ControllerBase
