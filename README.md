@@ -12,11 +12,21 @@ Additional support for concurrency is also handled at this layer - any new timin
 ## Web API
 The Web layer is built in .NET Core, and exposes one GET endpoint `GetStats` to retrieve the statistics, and a POST endpoint to recieve new action timings. The thin controller makes a call into a corresponding business logic layer component that has been dependency injected into the controller. Because our endpoint allows for arbitrary text entry, we also defend against SQL injection in this layer.
 
-
-
-
 # Run code
+The machine running this application should have the .NET runtime and SQL Express installed. After cloning the repository, the application can be built and run with:
+```
+dotnet run --project Actions.Web\Actions.Web.csproj
+```
+After which, the API can be accessed via:
+```
+POST: http://localhost:5101/ActionsTiming/v1/AddAction
+GET: http://localhost:5101/ActionsTiming/v1/GetStats
+```
 
+To run tests:
+```
+dotnet test
+```
 
 #Next Steps
 While the intention of this project was to demonstrate a production-ready API, there remains more work to be done to where this would be a robust implementation ready for extensive and reliable internal or external use.
