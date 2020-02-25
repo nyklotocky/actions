@@ -213,6 +213,18 @@ namespace Actions.Tests.UnitTests
 				{
 					TestName = "Multiple actions with multiple times"
 				},
+
+				new TestCaseData(arg: new []
+					{
+						new ActionTime
+						{
+							Action = "Robert'; DROP TABLE dbo.actionTimes; --",
+							Time = 100
+						}
+					})
+				{
+					TestName = "SQL Injection"
+				},
 			};
 		}
 	}
