@@ -15,6 +15,9 @@ EXEC sp_addRoleMember
 	@roleName = 'db_datawriter'
 	, @memberName = 'Actions_User';
 
+GRANT CREATE TABLE TO Actions_User;
+GRANT ALTER ON SCHEMA::dbo TO Actions_User;
+
 /*
  * This table will serve as a space- and time-saving mechanism.
  * By recording a unique surrogate key for the action name, we don't need
