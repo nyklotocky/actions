@@ -34,11 +34,9 @@ namespace Actions.Web.Controllers
 
 		[HttpPost]
 		[Route("v1/AddAction")]
-		public async Task<ActionResult> AddAction([FromBody]string actionTiming)
+		public async Task<ActionResult> AddAction([FromBody] ActionTiming actionTiming)
 		{
-			var deserializedActionTiming = JsonConvert.DeserializeObject<ActionTiming>(actionTiming);
-
-			await this._actionsTimingRecorder.RecordAsync(deserializedActionTiming);
+			await this._actionsTimingRecorder.RecordAsync(actionTiming);
 
 			return this.Ok();
 		}
